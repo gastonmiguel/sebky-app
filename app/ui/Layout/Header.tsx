@@ -1,6 +1,6 @@
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import ApplicationLogo from "@/app/ui/ApplicationLogo";
+import Logo from "@/app/ui/Logo";
 import Link from "next/link";
 import {useState} from "react";
 
@@ -17,7 +17,7 @@ export default function Header() {
                     <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                         <div className="flex lg:flex-1">
                             <Link href={"/"} className="-m-1.5 p-1.5">
-                                <ApplicationLogo />
+                                <Logo />
                             </Link>
                         </div>
                         <div className="flex lg:hidden">
@@ -52,7 +52,7 @@ export default function Header() {
                         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                             <div className="flex items-center justify-between">
                                 <Link href={"/"} className="-m-1.5 p-1.5">
-                                    <ApplicationLogo />
+                                    <Logo />
                                 </Link>
                                 <button
                                     type="button"
