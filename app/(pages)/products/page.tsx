@@ -1,14 +1,10 @@
 'use client'
 
-import Header from "@/app/ui/Layout/Header";
-import Categories from "@/app/ui/Products/Categories";
+import ProductsList from "@/app/ui/Products/Products-list";
 
 export default function Products() {
 
     return (
-        <>
-            <Header />
-            <Categories />
-        </>
+        <ProductsList />
     )
 }
