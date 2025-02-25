@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <>
             <div className="bg-white">
-                <header className="absolute inset-x-0 top-0 z-50 mx-auto max-w-2xl">
+                <header className="absolute inset-x-0 top-0 z-40 mx-auto max-w-2xl">
                     <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                         <div className="flex lg:flex-1">
                             <Link href={"/"} className="-m-1.5 p-1.5">
@@ -48,8 +48,8 @@ export default function Header() {
                         </div>
                     </nav>
                     <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-                        <div className="fixed inset-0 z-50" />
-                        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                        <div className="fixed inset-0 z-10" />
+                        <DialogPanel className="fixed inset-y-0 right-0 z-40 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                             <div className="flex items-center justify-between">
                                 <Link href={"/"} className="-m-1.5 p-1.5">
                                     <Logo />
@@ -64,10 +64,10 @@ export default function Header() {
                                 </button>
                             </div>
                             <div className="mt-6 flow-root">
-                                <div className="-my-6 divide-y divide-gray-500/10">
+                                <div className="-my-6 divide-y divide-gray-400/10">
                                     <div className="space-y-2 py-6">
                                         {navigation.map((item) => (
-                                            <Link href={item.href} key={item.name} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                                            <Link href={item.href} key={item.name} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-40">
 
                                             </Link>
                                         ))}
@@ -76,7 +76,7 @@ export default function Header() {
                                         <a
                                             target="_blank"
                                             href="https://wa.me/541171205918?text=Send20%a20%quote"
-                                            className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                            className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-40"
                                         >
                                             WhatsApp: 1171205918
                                         </a>

@@ -9,7 +9,7 @@ import {
     MenuItems,
 } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { FunnelIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { FunnelIcon } from '@heroicons/react/20/solid'
 import Header from "@/app/ui/Layout/Header";
 import { ReactNode } from "react";
 import Link from "next/link";
@@ -38,7 +38,7 @@ export default function ProductsLayout({ children }: { children: ReactNode }) {
                             className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"
                         />
 
-                        <div className="fixed inset-0 z-40 flex">
+                        <div className="fixed inset-0 z-50 flex">
                             <DialogPanel
                                 transition
                                 className="relative ml-auto flex size-full max-w-xs transform flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl transition duration-300 ease-in-out data-closed:translate-x-full"
