@@ -1,9 +1,11 @@
+import { Suspense } from "react";
 import {useEffect, useState} from "react";
 import { useSearchParams } from "next/navigation";
 import { Product } from "@/app/lib/definitions";
+import Image from "next/image";
 
 
-export default function ProductsList() {
+function ProductsList() {
     const [products, setProducts] = useState<Product[]>([]);
     const searchParams = useSearchParams();
 
@@ -24,11 +26,13 @@ export default function ProductsList() {
                 <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                     {products.map((product) => (
                         <div key={product.id} className="group relative">
-                            <img
+                            <Image
+                                width="176"
+                                height="256"
                                 alt={product.imageAlt}
                                 src={product.imageSrc}
                                 className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80"
-                            />
+                            ></Image>
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-sm text-gray-700">
@@ -47,4 +51,12 @@ export default function ProductsList() {
             </div>
         </div>
     )
+}
+
+export default function ProductsPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ProductsList />
+        </Suspense>
+    );
 }
